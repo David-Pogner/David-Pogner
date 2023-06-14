@@ -1,16 +1,36 @@
-### Hi there 👋
+```
+using System;
 
-<!--
-**David-Pogner/David-Pogner** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+namespace HTBLA_Leonding
+{
+    class ProgrammerStudent
+    {
+        public string Name { get; set; }
+        public string School { get; set; }
+        public string[] ProgrammingLanguages { get; set; }
 
-Here are some ideas to get you started:
+        public void Introduce()
+        {
+            Console.WriteLine($"Hi, I'm {Name}, a passionate programmer studying at {School}.");
+        }
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+        public void DisplayLanguages()
+        {
+            Console.WriteLine($"I am proficient in the following programming languages: {string.Join(", ", ProgrammingLanguages)}.");
+        }
+
+        static void Main(string[] args)
+        {
+            ProgrammerStudent student = new ProgrammerStudent
+            {
+                Name = "David",
+                School = "HTBLA Leonding",
+                ProgrammingLanguages = new[] { "C#", "C++" }
+            };
+
+            student.Introduce();
+            student.DisplayLanguages();
+        }
+    }
+}
+```
